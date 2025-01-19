@@ -1,7 +1,7 @@
 from pandas import Series
 
 """
-    Select elements from series by condition
+    Выбор элементов из серии по условию
 """
 
 s = Series(data={
