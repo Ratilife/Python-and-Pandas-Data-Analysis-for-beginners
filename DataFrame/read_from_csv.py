@@ -41,4 +41,4 @@ file_path = 'F:/Языки/Python/UChoba/Анализ данных на Python �
 # чтение файла
 laptop_prices = read_csv(file_path, delimiter=';')
 print(laptop_prices)
-
+print(laptop_prices.head())
