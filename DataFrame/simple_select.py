@@ -2,8 +2,8 @@ from pandas import Series
 from dataframes import get_countries_gdp
 
 """
-Select from dataframe using
-simple condition for column
+Выберите из DataFrame, используя
+простое условие для столбца
 """
 
 df = get_countries_gdp()
