@@ -2,6 +2,7 @@ from pandas import Series
 '''
      Примените функцию к каждому элементу, чтобы получить другой series
 '''
+# Создаем Series с данными о ВВП в миллиардах долларов для разных стран
 gdp_bln = Series(data={'USA': 28781,
                        'Russia': 2056,
                        'China': 18532,
@@ -11,6 +12,7 @@ gdp_bln = Series(data={'USA': 28781,
                        'UK': 3495,
                        'Japan': 4110,
                        'Canada': 2242})
+
 def convert(usd_value: float,
             currency: str,
             exchange_rates: dict[str, float]) -> float:
@@ -29,10 +31,13 @@ def convert(usd_value: float,
     ex_rate = exchange_rates[currency] # Получаем курс обмена для указанной валюты.
     return usd_value / ex_rate # Возвращаем конвертированное значение.
 
+# Применяем функцию convert к каждому элементу Series gdp_bln,
+# конвертируя значения в евро с использованием заданных курсов обмена.
 print('\nConvert using exchange rate:')
 converted_gdp = gdp_bln.apply(func=convert,
                               currency='EUR',
                               exchange_rates={
                                   'GBP': 1.1,
                                   'EUR': 1.23})
+# Печатаем конвертированные значения ВВП в евро
 print(converted_gdp)
