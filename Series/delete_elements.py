@@ -16,7 +16,7 @@ assert 'Arctica' in gdp_regions.keys()
 del gdp_regions['Oceania']
 assert 'Oceania' not in gdp_regions.keys()
 
-# delete several key/values
+# Удалить несколько key/values
 gdp_regions.drop(labels=['Antarctica', 'Arctica'], inplace=True)
 assert 'Antarctica' not in gdp_regions.keys()
 assert 'Arctica' not in gdp_regions.keys()
