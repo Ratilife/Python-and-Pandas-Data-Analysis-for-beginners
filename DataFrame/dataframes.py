@@ -9,3 +9,24 @@ def get_countries_gdp() -> DataFrame:
         }
     )
     return df
+
+def get_regional_sales_data():
+    df = DataFrame(
+        data=[
+            ['south', 'pc', 120, 73182],
+            ['south', 'laptops', 150, 90873],
+            ['south', 'tablets', 200, 65117],
+            ['north', 'pc', 15, 71764],
+            ['north', 'laptops', 18, 88234],
+            ['north', 'tablets', 30, None],  # Нет данных по цене
+            ['east', 'pc', 87, 71764],
+            ['east', 'laptops', None, 89245],  # Нет данных по количеству
+            ['east', 'tablets', 112, 63485],
+            ['west', 'pc', 16, 72245],
+            ['west', 'laptops', 23, 85123],
+            ['west', 'tablets', 14, 53213]
+        ],
+        columns=['region', 'product', 'quantity', 'price']
+    )
+    df.index = df['region'] + '_' + df['product']
+    return df
