@@ -15,8 +15,8 @@ import openpyxl
 workbook = openpyxl.Workbook()
 
 # Создание нового листа
-    sheet = workbook.active
-    sheet.title = "Sheet1"
+sheet = workbook.active
+sheet.title = "Sheet1"
 
 #Запись данных в ячейки
 
