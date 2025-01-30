@@ -1,5 +1,5 @@
 import pandas as pd
-data =filepath = n= df = s = value = df1=df2= query= connection=func=tuples=start=end=None
+data =filepath = n= df = s = value = df1=df2= query= connection=func=tuples=start=end=other=None
 #1. Создание объектов
 pd.Series(data)             #- создание одномерного массива.
 pd.DataFrame(data)          #- создание двумерной таблицы.
@@ -30,6 +30,7 @@ df.transform(func)                          #- применение функци
 #7. Слияние и объединение
 pd.merge(df1, df2, on='key')                #- объединение двух DataFrame по ключу.
 pd.concat([df1, df2])                       #- конкатенация DataFrame.
+pd.join(other)                              #- объединение с другим DataFrame по индексу.
 #8. Ввод и вывод данных
 df.to_csv(filepath)                         #- запись DataFrame в CSV файл.
 df.to_excel(filepath)                       #- запись DataFrame в Excel файл.
