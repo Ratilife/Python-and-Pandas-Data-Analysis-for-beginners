@@ -1,6 +1,8 @@
 from dataframes import get_regional_sales_data
 from pandas import isna
-
+'''
+проверка значения Nan
+'''
 df = get_regional_sales_data()
 
 # что такое Nan?

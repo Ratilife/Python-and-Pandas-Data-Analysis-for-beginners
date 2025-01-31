@@ -1,5 +1,5 @@
 import pandas as pd
-data =filepath = n= df = s = value = df1=df2= query= connection=func=tuples=start=end=other=None
+data =filepath = n= df = s = value = df1=df2= query= connection=func=tuples=start=end=other=url=None
 #1. Создание объектов
 pd.Series(data)             #- создание одномерного массива.
 pd.DataFrame(data)          #- создание двумерной таблицы.
@@ -85,3 +85,8 @@ df.unstack()                                #- преобразование мн
 #21. Работа с временными метками
 df.dt                                       #- доступ к атрибутам временных меток (например, .dt.year, .dt.month, .dt.day).
 df.date_range(start, end, freq='D')         #- создание диапазона дат.
+#22. Работа с HTML
+pd.read_html(url)                           #- чтение таблиц из HTML страницы.
+df.to_html(filepath)                        #- запись DataFrame в HTML файл.
+#23Оптимизация памяти
+pd.to_numeric() #- преобразование столбца в числовой тип с возможностью обработки ошибок.

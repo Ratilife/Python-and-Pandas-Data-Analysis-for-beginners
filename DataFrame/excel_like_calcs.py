@@ -1,7 +1,7 @@
 from dfs import get_sales
 
 """
-Excel-like calculations in pandas
+Excel-подобные расчеты в pandas
 """
 
 sales = get_sales()

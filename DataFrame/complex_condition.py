@@ -1,5 +1,7 @@
 from dataframes import get_countries_gdp
-
+'''
+    сложное условие
+'''
 # Получаем DataFrame с данными о странах
 df = get_countries_gdp()
 print(df)

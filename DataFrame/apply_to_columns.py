@@ -1,8 +1,8 @@
 from pandas import Series
 from dataframes import get_countries_gdp
-
-# Применить функцию к столбцам DataFrame для создания другого столбца
-
+'''
+ Применить функцию к столбцам DataFrame для создания другого столбца
+'''
 def get_per_capita_gdp(country_row: Series,
                        currency: str | None = None,
                        ex_rate: str | None = None) -> float:
@@ -14,10 +14,10 @@ def get_per_capita_gdp(country_row: Series,
 
 df = get_countries_gdp()
 
-# apply function to each row
+# Применить функцию к каждой строке
 df['gdp_per_capita'] = df.apply(func=get_per_capita_gdp, axis='columns')
 
-# provide additional parameters
+# Предоставьте дополнительные параметры
 df['gdp_per_capita_cur'] = df.apply(func=get_per_capita_gdp,
                                     axis='columns',
                                     currency='EUR',

@@ -1,5 +1,7 @@
 from pandas import DataFrame
-
+'''
+Создать колонку по условию
+'''
 courses = DataFrame({
     'course': ['math', 'statistics', 'economics', 'finance', 'biology'],
     'difficulty': [9, 8, 10, 9, 7],

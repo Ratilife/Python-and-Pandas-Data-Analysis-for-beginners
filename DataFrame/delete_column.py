@@ -1,5 +1,7 @@
 from pandas import DataFrame
-
+'''
+Удалить колонку
+'''
 # Создать из словаря
 economic_courses = DataFrame({
     'course': ['math', 'statistics', 'economics', 'finance'],

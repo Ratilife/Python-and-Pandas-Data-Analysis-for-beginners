@@ -1,6 +1,8 @@
 from pandas import Index, DataFrame
 from pandas import concat
-
+'''
+объединение и повторный индекс
+'''
 winter_index = Index(data=['dec', 'jan', 'feb'])
 summer_index = Index(data=['jun', 'ju', 'aug'])
 year_index = Index(data=['jan', 'feb', 'man',
